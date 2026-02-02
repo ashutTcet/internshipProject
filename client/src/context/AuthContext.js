@@ -9,12 +9,16 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (token) {
-      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-      loadUser();
-    } else {
-      setLoading(false);
-    }
+    const initAuth = async () => {
+      if (token) {
+        axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+        await loadUser();
+      } else {
+        setLoading(false);
+      }
+    };
+    initAuth();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [token]);
 
   const loadUser = async () => {
