@@ -1,0 +1,85 @@
+.locations {
+  width: 100%;
+}
+
+.locations-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.locations-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.map-section {
+  padding: 3rem 0;
+  background-color: var(--bg-white);
+}
+
+.map-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.popup-content p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.locations-list {
+  padding: 3rem 0;
+  background-color: var(--bg-cream);
+}
+
+.locations-list h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.location-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+}
+
+.location-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.location-details p {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.location-card button {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .locations-grid {
+    grid-template-columns: 1fr;
+  }
+}
